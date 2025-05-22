@@ -24,7 +24,7 @@ const Activities = () => {
   });
   
   // Get activities and ensure we always have an array
-  const activities = getActivities() ?? [];
+  const activities = getActivities() || [];
 
   // Function to handle viewing an activity
   const handleViewActivity = (activityId: string) => {
@@ -86,7 +86,7 @@ const Activities = () => {
             <div className="flex justify-between items-center">
               <TabsList>
                 <TabsTrigger value="all">All Activities</TabsTrigger>
-                {activities.map(category => (
+                {activities && activities.map(category => (
                   <TabsTrigger key={category.id} value={category.id}>
                     {category.title}
                   </TabsTrigger>
@@ -141,7 +141,7 @@ const Activities = () => {
                         required
                       >
                         <option value="">Select a category</option>
-                        {activities.map(category => (
+                        {activities && activities.map(category => (
                           <option key={category.id} value={category.id}>
                             {category.title}
                           </option>
@@ -170,7 +170,7 @@ const Activities = () => {
             
             <TabsContent value="all" className="mt-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {activities.map((category) => (
+                {activities && activities.map((category) => (
                   <ActivityCard 
                     key={category.id}
                     category={category}
@@ -182,10 +182,10 @@ const Activities = () => {
               </div>
             </TabsContent>
             
-            {activities.map(category => (
+            {activities && activities.map(category => (
               <TabsContent key={category.id} value={category.id} className="mt-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.items.map(activity => (
+                  {category.items && category.items.map(activity => (
                     <div key={activity.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                       <div className="p-4">
                         <h3 className="text-xl font-bold mb-2">{activity.title}</h3>
