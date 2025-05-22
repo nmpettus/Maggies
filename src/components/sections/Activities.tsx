@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -6,11 +5,12 @@ import LetterToMaggie from "@/components/activities/LetterToMaggie";
 import ActivityCard from "@/components/activities/ActivityCard";
 import { getActivities } from "@/data/activitiesData";
 import { printImage } from "@/utils/printUtils";
-import { Upload, Plus } from "lucide-react";
+import { Upload, Plus, Check, Maximize2, Printer } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Activities = () => {
   const [viewedActivities, setViewedActivities] = useState<string[]>([]);
@@ -23,7 +23,8 @@ const Activities = () => {
     file: null as File | null
   });
   
-  const activities = getActivities();
+  // Get activities and provide a default empty array if undefined
+  const activities = getActivities() || [];
 
   // Function to handle viewing an activity
   const handleViewActivity = (activityId: string) => {
