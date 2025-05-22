@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, CardProps } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -38,6 +37,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
   className 
 }) => {
   const [expanded, setExpanded] = React.useState(false);
+  const items = category?.items || [];
 
   const toggleExpanded = () => {
     setExpanded(!expanded);
@@ -58,13 +58,13 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
           className="w-full flex items-center justify-between mb-4"
           onClick={toggleExpanded}
         >
-          <span>View {category.items.length} Activities</span>
+          <span>View {items.length} Activities</span>
           {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
         </Button>
         
-        {expanded && (
+        {expanded && items.length > 0 && (
           <div className="space-y-4 mt-4">
-            {category.items.map((activity) => (
+            {items.map((activity) => (
               <ActivityItemCard 
                 key={activity.id}
                 activity={activity}
