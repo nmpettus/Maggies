@@ -23,8 +23,8 @@ const Activities = () => {
     file: null as File | null
   });
   
-  // Get activities and provide a default empty array if undefined
-  const activities = getActivities() || [];
+  // Get activities and ensure we always have an array
+  const activities = getActivities() ?? [];
 
   // Function to handle viewing an activity
   const handleViewActivity = (activityId: string) => {
@@ -57,6 +57,20 @@ const Activities = () => {
       file: null
     });
   };
+
+  // Early return if activities is empty to prevent mapping errors
+  if (!Array.isArray(activities) || activities.length === 0) {
+    return (
+      <section id="activities" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-extrabold text-center mb-4 text-gray-800 font-['Comic_Neue']">Activities for All</h2>
+          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
+            No activities available at the moment. Please check back later!
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="activities" className="py-16 bg-gray-50">
