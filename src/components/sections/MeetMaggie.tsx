@@ -1,9 +1,9 @@
-
 import React, { useState } from "react";
 import MaggieProfile from "../maggie/MaggieProfile";
 import MaggieCarousel from "../maggie/MaggieCarousel";
 import MaggieThumbnails from "../maggie/MaggieThumbnails";
 import MaggieImageViewer from "../maggie/MaggieImageViewer";
+import MaggieImagesSection from "@/components/sections/MaggieImagesSection";
 
 const MeetMaggie = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -36,7 +36,10 @@ const MeetMaggie = () => {
             "I may be small, but my stories are big!" - Maggie
           </p>
         </div>
-      </div>
+
+      
+
+      </div> {/* This closes the container div */}
 
       <MaggieImageViewer 
         selectedImage={selectedImage} 

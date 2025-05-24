@@ -61,10 +61,7 @@ export const maggie_images = [
     src: "/lovable-uploads/904bbfd4-81bf-49a4-8b1b-74825bcddacf.png",
     alt: "Maggie and friend in Santa outfits"
   },
-  {
-    src: "/lovable-uploads/f2b8f2a9-4d4d-484b-b915-5420d86ff3ee.png",
-    alt: "Maggie with friend on couch"
-  },
+
   // Added images
   {
     src: "/lovable-uploads/60eb3c02-eb74-49dc-9a7a-858da37fc00e.png",
@@ -77,5 +74,45 @@ export const maggie_images = [
   {
     src: "/lovable-uploads/aa165329-9eb2-4f0a-9467-403e52e4d885.png",
     alt: "Maggie and friend sitting together on couch"
+  },
+
+];
+
+// Book/cartoon illustrations (for Maggie from Her Books)
+
+export const maggie_illustrations = [
+  { 
+    src: "/illustrations/maggie1.jpg",
+    alt: "Maggie resting on the couch"
+  },
+  { 
+    src: "/illustrations/mI.jpg",
+    alt: "Maggie leaping on the floor"
+  },
+   {
+    src: "/illustrations/God1.png",
+    alt: "Maggie smiling" 
+  },
+  {
+    src: "/illustrations/mSmile1.jpg",
+    alt: "Maggie head tilt smiling" 
+  },
+  {
+    src: "/illustrations/msweet.jpg",
+    alt: "Maggie playful pose" 
+  },
+  {
+    src:"/illustrations/mSur4.jpg",
+    alt:"Maggie surprised expression"
+  },
+  {
+    src: "/illustrations/Rolling4.jpg",
+    alt: "Maggie rolling in the grass"
+  },
+  {
+    src: "/illustrations/stars2.jpg",
+    alt: "Maggie looking at stars"
   }
+ 
+  // ...add more book illustration objects here...
 ];
