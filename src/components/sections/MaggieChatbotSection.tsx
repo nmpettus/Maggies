@@ -12,7 +12,7 @@ const MaggieChatbotSection = () => {
           Have a conversation with Maggie! Ask her questions, request a poem, or hear a short story about her adventures.
         </p>
         
-        <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto overflow-hidden">
           <MaggieChatbot />
         </div>
         
