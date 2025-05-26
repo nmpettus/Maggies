@@ -115,4 +115,9 @@
   .font-canva {
     font-family: 'Canva Sans', sans-serif;
   }
+  
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
 }
