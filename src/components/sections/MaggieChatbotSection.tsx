@@ -9,20 +9,24 @@ const MaggieChatbotSection = () => {
           Chat with Maggie
         </h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-          Have a conversation with Maggie! Ask her questions about her life, request a poem, or hear a short story about her adventures as a storytelling dog.
+          Have a conversation with Maggie! Ask her questions about her life, request a poem, or hear a short story about her adventures.
         </p>
         
-        <div className="max-w-md mx-auto shadow-xl rounded-lg overflow-hidden">
+        <div className="max-w-md mx-auto">
           <MaggieChatbot />
         </div>
         
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-600 font-medium mb-3">Try asking Maggie:</p>
-          <p className="text-sm text-gray-500 max-w-lg mx-auto grid gap-2">
-            <span className="inline-block px-3 py-1 bg-purple-50 rounded-full italic">"Tell me about yourself, Maggie"</span>
-            <span className="inline-block px-3 py-1 bg-purple-50 rounded-full italic">"Can you share a poem about dogs?"</span>
-            <span className="inline-block px-3 py-1 bg-purple-50 rounded-full italic">"Tell me a story about your adventures"</span>
-            <span className="inline-block px-3 py-1 bg-purple-50 rounded-full italic">"What's your favorite food?"</span>
+        <div className="mt-8 text-center max-w-lg mx-auto">
+          <p className="text-sm text-gray-600 font-medium mb-3">Try asking Maggie one of these questions:</p>
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
+            <span className="inline-block px-3 py-1 bg-purple-50 rounded-full text-sm text-purple-700">"Tell me about yourself"</span>
+            <span className="inline-block px-3 py-1 bg-purple-50 rounded-full text-sm text-purple-700">"Can you share a poem?"</span>
+            <span className="inline-block px-3 py-1 bg-purple-50 rounded-full text-sm text-purple-700">"Tell me a story"</span>
+            <span className="inline-block px-3 py-1 bg-purple-50 rounded-full text-sm text-purple-700">"What's your favorite food?"</span>
+          </div>
+          <p className="text-xs text-gray-500">
+            Note: Maggie is a simple chatbot who loves to talk about herself, share poems, and tell stories. 
+            She's still learning, so please be patient with her!
           </p>
         </div>
       </div>
