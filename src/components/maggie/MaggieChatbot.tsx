@@ -136,7 +136,7 @@ const MaggieChatbot = () => {
                     {message.sender === "user" ? "You" : "Maggie"}
                   </span>
                 </div>
-                <div className="whitespace-pre-wrap">{message.content}</div>
+                <div className="whitespace-pre-wrap break-words">{message.content}</div>
               </div>
             ))}
             {isTyping && (
@@ -166,16 +166,22 @@ const MaggieChatbot = () => {
             e.preventDefault();
             handleSendMessage();
           }}
-          className="flex w-full gap-2"
+          className="flex w-full gap-2 items-center"
         >
           <Input
             placeholder="Ask Maggie a question..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="flex-1"
+            className="flex-1 h-10"
           />
-          <Button type="submit" size="icon" disabled={!input.trim() || isTyping}>
+          <Button 
+            type="submit" 
+            size="icon" 
+            disabled={!input.trim() || isTyping}
+            className="h-10 w-10 flex-shrink-0"
+          >
             <Send className="h-4 w-4" />
+            <span className="sr-only">Send message</span>
           </Button>
         </form>
       </CardFooter>
