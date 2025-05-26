@@ -91,13 +91,6 @@ const Navigation = () => {
                 Activities
               </a>
               <a 
-                href="#chat-with-maggie" 
-                className={`text-gray-800 hover:text-indigo-600 font-medium ${activeSection === 'chat-with-maggie' ? 'text-indigo-600 font-bold' : ''}`}
-                onClick={(e) => handleNavClick(e, 'chat-with-maggie')}
-              >
-                Chat with Maggie
-              </a>
-              <a 
                 href="#projects" 
                 className={`text-gray-800 hover:text-indigo-600 font-medium ${activeSection === 'projects' ? 'text-indigo-600 font-bold' : ''}`}
                 onClick={(e) => handleNavClick(e, 'projects')}

@@ -10,7 +10,6 @@ import Newsletter from "@/components/sections/NewsLetter";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
-import MaggieChatbotSection from "@/components/sections/MaggieChatbotSection";
 
 const Index = () => {
   return (
@@ -25,7 +24,6 @@ const Index = () => {
       <div id="activities">
         <Activities />
       </div>
-      <MaggieChatbotSection />
       <FutureProjects />
       <div id="newsletter">
         <Newsletter />
