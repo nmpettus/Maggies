@@ -70,6 +70,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             Activities
           </a>
           <a 
+            href="#chat-with-maggie" 
+            onClick={(e) => handleNavClick(e, 'chat-with-maggie')}
+            className="text-xl py-2 border-b border-gray-200 text-gray-800 hover:text-indigo-600"
+          >
+            Chat with Maggie
+          </a>
+          <a 
             href="#projects" 
             onClick={(e) => handleNavClick(e, 'projects')}
             className="text-xl py-2 border-b border-gray-200 text-gray-800 hover:text-indigo-600"
