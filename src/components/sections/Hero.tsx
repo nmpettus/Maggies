@@ -22,8 +22,8 @@ const Hero = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 max-w-lg relative">
-            {/* Moved button to the very top of the container by using a larger negative top value */}
-            <div className="absolute -top-16 left-0 animate-bounce">
+            {/* Adjusted button position to be more visible on mobile */}
+            <div className="absolute -top-10 left-0 animate-bounce">
               <Button 
                 className="rounded-full bg-amber-400 hover:bg-amber-500 text-indigo-900 font-bold py-3 px-5 shadow-lg group transition-all duration-300"
                 onClick={scrollToLetterSection}
